@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "PNGSavings";
+  src: url("/fonts/PNGSavings.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #faf4ef;
+  overflow-wrap: break-word;
+}
+
+h2,
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.app {
+  width: 100%;
+  padding: 0 2rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
+.app main {
+  width: 70%
+}
+
+header h1 {
+  font-family: "PNGSavings", serif;
+  background-color: #d97d54;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  background-color: #faecd6;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-form h2 {
+  margin: 0;
+}
+
+.event-form input,
+.event-form select,
+.event-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.event-form input::placeholder {
+  color: black !important;
+}
+
+.event-form button {
+  background-color: #f4a259;
+  color: #3d1f00;
+  border: none;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background-color: #d95d39;
+  color: #fffcf6;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.event-card {
+  flex: 1 1 calc((100% / 3) - 1rem);
+  max-width: calc((100% / 3) - 1rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fefefe;
+}
+
+.event-card.confirmed {
+  background-color: #f9d0ae;
+}
+
+.event-card.cancelled {
+  background-color: #f2d5d0;
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button.complete {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  max-width: 100%;
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.complete:hover {
+  background-color: #8c6239;
+}
+
+button.cancel {
+  flex: 1 1 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #d2695e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.cancel:hover {
+  background-color: #b14c45;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .event-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .event-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
